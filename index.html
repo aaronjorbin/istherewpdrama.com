@@ -29,7 +29,7 @@
 
         <header>
           <h1>YES</h1>
-          <h2>Though it doesn't involve the customizer right now</h2>
+          <h2 id="tagline"></h2>
         </header>
 
 
@@ -40,5 +40,25 @@
         
       </div>
     </div>
+	<script>
+		var taglines=[
+			'Blame the Customizer',
+			'Matt wrote code again',
+			'You forgot the G in the GPL',
+			'BBQ does not mean hot dogs on a grill',
+			'Automattic exists',
+			'Emoji',
+			"The newest feature doesn't help me",
+			'WordPress still supports PHP 3.0',
+			"Someone registered wordpresswordpresswordpresswordpresswordpresswordpress.com",
+			'Jetpack has a feature',
+			'SVN checkout',
+			'Hello Dolly still symbolizes the hope and enthusiasm of an entire generation',
+			'Wonderboymusic closed my ticket',
+			'Pento is working on something',
+			"A lowercase p suddenly appeared'
+		];
+		document.querySelector('#tagline').innerHTML = taglines[ Math.floor(Math.random()*taglines.length) ];
+	</script>
   </body>
 </html>
