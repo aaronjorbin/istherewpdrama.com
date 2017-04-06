@@ -33,7 +33,7 @@
         </header>
 
         <footer>
-          maintained by <a href="https://github.com/aaronjorbin">aaronjorbin</a><br>
+          maintained by <a href="https://github.com/aaronjorbin">aaronjorbin</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;<a href='#' onclick="return wpdrama();">Give me More Drama</a>
         </footer>
         
       </div>
@@ -73,7 +73,12 @@
 			'WordCamps happen in cities',
 			'The plugin repository was only in open beta for 6 months'
 		];
-		document.querySelector('#tagline').innerHTML = taglines[ Math.floor(Math.random()*taglines.length) ];
+		function wpdrama(){
+			drama = taglines[ Math.floor(Math.random()*taglines.length) ];
+			document.querySelector('#tagline').innerHTML = drama;
+			return false;
+		}
+		wpdrama();
 	</script>
   </body>
 </html>
