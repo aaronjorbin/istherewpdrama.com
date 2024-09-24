@@ -99,13 +99,22 @@
 			}
 			return a;
 		}
-		var drama = shuffle( taglines );
 		function wpdrama(){
 			let msg = drama.length > 0 ?  drama.pop() : "And it's all you will talk about at WordCamp";
 			document.querySelector('#tagline').innerHTML = msg;
 			return false;
 		}
-		wpdrama();
+
+		const urlParams = new URLSearchParams(window.location.search);
+		const theDrama = urlParams.get('drama');
+		const start = taglines[ theDrama ];
+		const drama = shuffle( taglines );
+
+		if ( start ){
+			document.querySelector('#tagline').innerHTML = start;
+		} else {
+			wpdrama();
+		}
 	</script>
   </body>
 </html>
